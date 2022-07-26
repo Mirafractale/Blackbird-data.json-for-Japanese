@@ -2169,6 +2169,48 @@
           "value": "soup.find('span',id_='title').text"
         }
       ]
+    },
+    {
+      "app": "SUZURI",
+      "id": 983,
+      "method": "GET",
+      "url": "https://suzuri.jp/{username}",
+      "valid": "response.status == 200",
+      "metadata": [
+        {
+          "type": "generic-data",
+          "key": "Name",
+          "value": "soup.find('h1',id_='profile__user-name').text"
+        }
+      ]
+    },
+    {
+      "app": "Linktree",
+      "id": 982,
+      "method": "GET",
+      "url": "https://linktr.ee/{username}",
+      "valid": "response.status == 200 and soup.find('span',id_='profile-{username}').text != None"
+    },
+    {
+      "app": "Note",
+      "id": 981,
+      "method": "GET",
+      "url": "https://note.com/{username}",
+      "valid": "response.status == 200"
+    },
+    {
+      "app": "Seesaaブログ",
+      "id": 980,
+      "method": "GET",
+      "url": "http://{username}.seesaa.net/",
+      "valid": "response.status == 200"
+    },
+    {
+      "app": "tumblr",
+      "id": 979,
+      "method": "GET",
+      "url": "https://{username}.tumblr.com/",
+      "valid": "response.status == 200"
     }
   ]
 }
